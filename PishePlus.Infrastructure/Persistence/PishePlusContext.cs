@@ -5,15 +5,17 @@ using System.Threading.Tasks;
 //using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using PishePlus.Application.Common.Interfaces;
+using PishePlus.Domain.Common;
 //using PishePlus.Application.Common.Interfaces;
 //using PishePlus.Domain.Common;
 using PishePlus.Domain.Entities;
 
 namespace PishePlus.Infrastructure.Persistence
 {
-    public partial class PishePlusContext : DbContext/*, IPishePlusContext*/
+    public partial class PishePlusContext : DbContext, IPishePlusContext
     {
-        //private readonly ICurrentUserService _currentUser;
+        private readonly ICurrentUserService _currentUserService;
         //private readonly IDateTime _dateTime;
 
         public PishePlusContext()
@@ -21,11 +23,11 @@ namespace PishePlus.Infrastructure.Persistence
         }
 
         public PishePlusContext(
-            DbContextOptions<PishePlusContext> options/*,*/
-            //ICurrentUserService currentUserService,
+            DbContextOptions<PishePlusContext> options,
+            ICurrentUserService currentUserService/*,*/
             /*IDateTime dateTime*/) : base(options)
         {
-            //_currentUser = currentUserService;
+            _currentUserService = currentUserService;
             //_dateTime = dateTime;
         }
 
@@ -82,20 +84,23 @@ namespace PishePlus.Infrastructure.Persistence
 
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
         {
-            //foreach (var entry in ChangeTracker.Entries<AuditableEntity>())
-            //{
-            //    switch (entry.State)
-            //    {
-            //        case EntityState.Added:
-            //            //entry.Entity.CreatedBy = _currentUser.UserId;
-            //            entry.Entity.Created = _dateTime.Now;
-            //            break;
-            //        case EntityState.Modified:
-            //            //entry.Entity.LastModifiedBy = _currentUser.UserId;
-            //            entry.Entity.LastModified = _dateTime.Now;
-            //            break;
-            //    }
-            //}
+            foreach (var entry in ChangeTracker.Entries<AuditEntity>())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Added:
+                        entry.Entity.CreatedBy = _currentUserService.UserId;
+                        entry.Entity.Created = DateTime.UtcNow;
+                        //entry.Entity.Created = _dateTime.Now;
+                        break;
+
+                    case EntityState.Modified:
+                        entry.Entity.LastModifiedBy = _currentUserService.UserId;
+                        entry.Entity.LastModified = DateTime.UtcNow;
+                        //entry.Entity.LastModified = _dateTime.Now;
+                        break;
+                }
+            }
 
             return base.SaveChangesAsync(cancellationToken);
         }

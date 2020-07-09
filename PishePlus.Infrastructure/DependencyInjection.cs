@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using PishePlus.Application.Common.Interfaces;
 using PishePlus.Infrastructure.Persistence;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace PishePlus.Infrastructure
                     configuration.GetConnectionString("Local"),
                     b => b.MigrationsAssembly(typeof(PishePlusContext).Assembly.FullName)));
 
-            //services.AddScoped<IPishePlusContext>(provider => provider.GetService<PishePlusContext>());
+            services.AddScoped<IPishePlusContext>(provider => provider.GetService<PishePlusContext>());
 
             return services;
         }

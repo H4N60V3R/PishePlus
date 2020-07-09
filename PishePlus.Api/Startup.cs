@@ -9,6 +9,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using PishePlus.Api.Services;
+using PishePlus.Application.Common.Interfaces;
 using PishePlus.Infrastructure;
 
 namespace PishePlus.Api
@@ -25,6 +27,8 @@ namespace PishePlus.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddInfrastructure(Configuration);
+
+            services.AddScoped<ICurrentUserService, CurrentUserService>();
 
             services.AddControllers();
         }

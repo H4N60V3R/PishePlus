@@ -11,6 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PishePlus.Application\PishePlus.Application.csproj" />
     <ProjectReference Include="..\PishePlus.Domain\PishePlus.Domain.csproj" />
   </ItemGroup>
 
