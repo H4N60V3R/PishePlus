@@ -25,13 +25,19 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.DocumentId).HasColumnName("DocumentID");
 
+            entity.Property(e => e.IsDelete).HasDefaultValueSql("((0))");
+
             entity.Property(e => e.IsInSlider).HasDefaultValueSql("((0))");
 
             entity.Property(e => e.IsShow).HasDefaultValueSql("((1))");
 
             entity.Property(e => e.IsSuggested).HasDefaultValueSql("((0))");
 
+            entity.Property(e => e.LikeCount).HasDefaultValueSql("((0))");
+
             entity.Property(e => e.ModifiedDate).HasDefaultValueSql("(getdate())");
+
+            entity.Property(e => e.ViewCount).HasDefaultValueSql("((0))");
 
             entity.Property(e => e.PostGuid)
                 .HasColumnName("PostGUID")

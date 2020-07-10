@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace PishePlus.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public abstract class ApiController : ControllerBase
     {

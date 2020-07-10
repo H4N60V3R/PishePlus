@@ -5,11 +5,15 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishePlus.Api", "PishePlus.Api\PishePlus.Api.csproj", "{2685F703-A306-443D-A3EC-95EA5058D603}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PishePlus.Domain", "PishePlus.Domain\PishePlus.Domain.csproj", "{541D94F5-14A9-4F12-AC96-935D60B8828E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishePlus.Domain", "PishePlus.Domain\PishePlus.Domain.csproj", "{541D94F5-14A9-4F12-AC96-935D60B8828E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PishePlus.Application", "PishePlus.Application\PishePlus.Application.csproj", "{666CE716-A9C3-4A51-834C-B94EF1A65D56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishePlus.Application", "PishePlus.Application\PishePlus.Application.csproj", "{666CE716-A9C3-4A51-834C-B94EF1A65D56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PishePlus.Infrastructure", "PishePlus.Infrastructure\PishePlus.Infrastructure.csproj", "{80D1C3F2-7902-438E-AD83-5F35CF6D94DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PishePlus.Infrastructure", "PishePlus.Infrastructure\PishePlus.Infrastructure.csproj", "{80D1C3F2-7902-438E-AD83-5F35CF6D94DD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A0AD1AA6-51CB-4A6E-A13B-774716D098F5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{30DC71BE-47D1-4A74-826A-98E9351A5D43}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +40,12 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2685F703-A306-443D-A3EC-95EA5058D603} = {A0AD1AA6-51CB-4A6E-A13B-774716D098F5}
+		{541D94F5-14A9-4F12-AC96-935D60B8828E} = {A0AD1AA6-51CB-4A6E-A13B-774716D098F5}
+		{666CE716-A9C3-4A51-834C-B94EF1A65D56} = {A0AD1AA6-51CB-4A6E-A13B-774716D098F5}
+		{80D1C3F2-7902-438E-AD83-5F35CF6D94DD} = {A0AD1AA6-51CB-4A6E-A13B-774716D098F5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DA2D6C38-54E5-4E9C-9998-27F6F24CCB44}

@@ -15,4 +15,9 @@
     <ProjectReference Include="..\PishePlus.Domain\PishePlus.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Posts\ViewModels\" />
+    <Folder Include="Posts\Queries\" />
+  </ItemGroup>
+
 </Project>
