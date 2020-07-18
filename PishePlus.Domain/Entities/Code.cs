@@ -12,6 +12,8 @@ namespace PishePlus.Domain.Entities
             ContractorDocument = new HashSet<ContractorDocument>();
             Document = new HashSet<Document>();
             Order = new HashSet<Order>();
+            OrderRequest = new HashSet<OrderRequest>();
+            Post = new HashSet<Post>();
             PrivateDiscount = new HashSet<PrivateDiscount>();
             PublicDiscount = new HashSet<PublicDiscount>();
             Token = new HashSet<Token>();
@@ -33,6 +35,8 @@ namespace PishePlus.Domain.Entities
         public virtual ICollection<ContractorDocument> ContractorDocument { get; set; }
         public virtual ICollection<Document> Document { get; set; }
         public virtual ICollection<Order> Order { get; set; }
+        public virtual ICollection<OrderRequest> OrderRequest { get; set; }
+        public virtual ICollection<Post> Post { get; set; }
         public virtual ICollection<PrivateDiscount> PrivateDiscount { get; set; }
         public virtual ICollection<PublicDiscount> PublicDiscount { get; set; }
         public virtual ICollection<Token> Token { get; set; }

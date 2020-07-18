@@ -32,6 +32,8 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.Title).IsRequired();
 
+            entity.Property(e => e.Url).IsRequired();
+
             entity.HasOne(d => d.Document)
                 .WithMany(p => p.Advertisement)
                 .HasForeignKey(d => d.DocumentId)

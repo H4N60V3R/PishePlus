@@ -13,6 +13,8 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
         {
             entity.HasIndex(e => e.DocumentId);
 
+            entity.HasIndex(e => e.SliderCodeId);
+
             entity.HasIndex(e => e.UserId);
 
             entity.Property(e => e.PostId).HasColumnName("PostID");
@@ -25,19 +27,11 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.DocumentId).HasColumnName("DocumentID");
 
-            entity.Property(e => e.IsDelete).HasDefaultValueSql("((0))");
-
-            entity.Property(e => e.IsInSlider).HasDefaultValueSql("((0))");
-
             entity.Property(e => e.IsShow).HasDefaultValueSql("((1))");
 
             entity.Property(e => e.IsSuggested).HasDefaultValueSql("((0))");
 
-            entity.Property(e => e.LikeCount).HasDefaultValueSql("((0))");
-
             entity.Property(e => e.ModifiedDate).HasDefaultValueSql("(getdate())");
-
-            entity.Property(e => e.ViewCount).HasDefaultValueSql("((0))");
 
             entity.Property(e => e.PostGuid)
                 .HasColumnName("PostGUID")
@@ -53,6 +47,12 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
                 .HasForeignKey(d => d.DocumentId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Post_Document");
+
+            entity.HasOne(d => d.SliderCode)
+                .WithMany(p => p.Post)
+                .HasForeignKey(d => d.SliderCodeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Post_Code");
 
             entity.HasOne(d => d.User)
                 .WithMany(p => p.Post)

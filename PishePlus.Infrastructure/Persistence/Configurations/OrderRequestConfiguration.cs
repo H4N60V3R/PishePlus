@@ -15,6 +15,8 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.HasIndex(e => e.OrderId);
 
+            entity.HasIndex(e => e.StateCodeId);
+
             entity.Property(e => e.OrderRequestId).HasColumnName("OrderRequestID");
 
             entity.Property(e => e.ContractorId).HasColumnName("ContractorID");
@@ -23,13 +25,15 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.IsDelete).HasDefaultValueSql("((0))");
 
-            entity.Property(e => e.IsAccept).HasDefaultValueSql("((0))");
-
             entity.Property(e => e.IsAllow).HasDefaultValueSql("((0))");
 
             entity.Property(e => e.ModifiedDate).HasDefaultValueSql("(getdate())");
 
             entity.Property(e => e.OrderId).HasColumnName("OrderID");
+
+            entity.Property(e => e.StateCodeId).HasColumnName("StateCodeID");
+
+            entity.Property(e => e.Title).IsRequired();
 
             entity.Property(e => e.OrderRequestGuid)
                 .HasColumnName("OrderRequestGUID")
@@ -47,6 +51,12 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
                 .HasForeignKey(d => d.OrderId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_OrderRequest_Order");
+
+            entity.HasOne(d => d.StateCode)
+                .WithMany(p => p.OrderRequest)
+                .HasForeignKey(d => d.StateCodeId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_OrderRequest_StateCode");
         }
     }
 }

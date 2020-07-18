@@ -24,7 +24,11 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.IsAccept).HasDefaultValueSql("((0))");
 
+            entity.Property(e => e.IsDelete).HasDefaultValueSql("((0))");
+
             entity.Property(e => e.TitleCodeId).HasColumnName("TitleCodeID");
+
+            entity.Property(e => e.ModifiedDate).HasDefaultValueSql("(getdate())");
 
             entity.HasOne(d => d.Contractor)
                 .WithMany(p => p.ContractorDocument)

@@ -10,6 +10,7 @@ namespace PishePlus.Domain.Entities
         public int DocumentId { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
+        public string Url { get; set; }
         public bool IsShow { get; set; }
         public bool IsDelete { get; set; }
         public DateTime ModifiedDate { get; set; }

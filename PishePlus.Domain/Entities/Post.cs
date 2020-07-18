@@ -16,6 +16,7 @@ namespace PishePlus.Domain.Entities
         public Guid PostGuid { get; set; }
         public int UserId { get; set; }
         public int DocumentId { get; set; }
+        public int? SliderCodeId { get; set; }
         public int ViewCount { get; set; }
         public int LikeCount { get; set; }
         public string Title { get; set; }
@@ -23,12 +24,12 @@ namespace PishePlus.Domain.Entities
         public string Description { get; set; }
         public bool IsShow { get; set; }
         public bool IsSuggested { get; set; }
-        public bool IsInSlider { get; set; }
         public bool IsDelete { get; set; }
         public DateTime CreationDate { get; set; }
         public DateTime ModifiedDate { get; set; }
 
         public virtual Document Document { get; set; }
+        public virtual Code SliderCode { get; set; }
         public virtual User User { get; set; }
         public virtual ICollection<PostCategory> PostCategory { get; set; }
         public virtual ICollection<PostComment> PostComment { get; set; }
