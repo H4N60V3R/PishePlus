@@ -8921,26 +8921,33 @@ namespace PishePlus.Infrastructure.Persistence
 						Name = "Gender",
 						DisplayName = "جنسیت"
 					},
-                    new CodeGroup
-                    {
-                        CodeGroupId = 4,
-                        CodeGroupGuid = Guid.Parse("39c56245-8e42-4cef-8ddd-5e4c17782e8b"),
-                        Name = "OrderState",
-                        DisplayName = "وضعیت سفارش"
-                    },
-                    new CodeGroup
-                    {
-                        CodeGroupId = 5,
-                        CodeGroupGuid = Guid.Parse("7e9db57a-0c09-47ff-98b5-f49363beff67"),
+					new CodeGroup
+					{
+						CodeGroupId = 4,
+						CodeGroupGuid = Guid.Parse("39c56245-8e42-4cef-8ddd-5e4c17782e8b"),
+						Name = "OrderState",
+						DisplayName = "وضعیت سفارش"
+					},
+					new CodeGroup
+					{
+						CodeGroupId = 5,
+						CodeGroupGuid = Guid.Parse("7e9db57a-0c09-47ff-98b5-f49363beff67"),
 						Name = "Role",
-                        DisplayName = "نقش"
-                    },
+						DisplayName = "نقش"
+					},
 					new CodeGroup
 					{
 						CodeGroupId = 6,
 						CodeGroupGuid = Guid.Parse("107a7244-6e66-4369-8ba6-dfb0636642c4"),
 						Name = "ContactUsBusinessType",
 						DisplayName = "نوع کسب و کار بخش ارتباط با ما"
+					},
+					new CodeGroup
+					{
+						CodeGroupId = 7,
+						CodeGroupGuid = Guid.NewGuid(),
+						Name = "OrderRequestState",
+						DisplayName = "وضعیت درخواست سفارش"
 					}
 				);
 
@@ -9021,69 +9028,69 @@ namespace PishePlus.Infrastructure.Persistence
 						DisplayName = "مرد",
 						IsDelete = false
 					},
-                    new Code
-                    {
-                        CodeId = 9,
-                        CodeGuid = Guid.Parse("b5d74bda-849b-427c-a6e0-463c1e5f615b"),
-                        CodeGroupId = 4,
-                        Name = "Waiting",
-                        DisplayName = "در انتظار تایید",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 10,
-                        CodeGuid = Guid.Parse("10afdac9-a075-40e1-9207-1813befcf4d6"),
+					new Code
+					{
+						CodeId = 9,
+						CodeGuid = Guid.Parse("b5d74bda-849b-427c-a6e0-463c1e5f615b"),
 						CodeGroupId = 4,
-                        Name = "Doing",
-                        DisplayName = "در حال انجام",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 11,
-                        CodeGuid = Guid.Parse("2b9d07c8-5535-495e-8557-da32acb58600"),
+						Name = "WaitingForAcceptance",
+						DisplayName = "در انتظار تایید",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 10,
+						CodeGuid = Guid.Parse("10afdac9-a075-40e1-9207-1813befcf4d6"),
 						CodeGroupId = 4,
-                        Name = "Done",
-                        DisplayName = "انجام شده",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 12,
-                        CodeGuid = Guid.Parse("61960336-e912-4658-9ab3-59f4c58e0b23"),
+						Name = "Doing",
+						DisplayName = "در حال انجام",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 11,
+						CodeGuid = Guid.Parse("2b9d07c8-5535-495e-8557-da32acb58600"),
 						CodeGroupId = 4,
-                        Name = "Canceled",
-                        DisplayName = "لغو شده",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 13,
-                        CodeGuid = Guid.Parse("46a09d81-c57f-4655-a8f5-027c66a6cfb1"),
-                        CodeGroupId = 4,
-                        Name = "Admin",
-                        DisplayName = "ادمین",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 14,
-                        CodeGuid = Guid.Parse("91b3cdab-39c1-40fb-b077-a2d6e611f50a"),
+						Name = "Done",
+						DisplayName = "انجام شده",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 12,
+						CodeGuid = Guid.Parse("61960336-e912-4658-9ab3-59f4c58e0b23"),
 						CodeGroupId = 4,
-                        Name = "Client",
-                        DisplayName = "سرویس گیرنده",
-                        IsDelete = false
-                    },
-                    new Code
-                    {
-                        CodeId = 15,
-                        CodeGuid = Guid.Parse("959b10a3-b8ed-4a9d-bdf3-17ec9b2ceb15"),
+						Name = "Canceled",
+						DisplayName = "لغو شده",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 13,
+						CodeGuid = Guid.Parse("46a09d81-c57f-4655-a8f5-027c66a6cfb1"),
 						CodeGroupId = 4,
-                        Name = "Contractor",
-                        DisplayName = "سرویس دهنده",
-                        IsDelete = false
-                    },
+						Name = "Admin",
+						DisplayName = "ادمین",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 14,
+						CodeGuid = Guid.Parse("91b3cdab-39c1-40fb-b077-a2d6e611f50a"),
+						CodeGroupId = 4,
+						Name = "Client",
+						DisplayName = "سرویس گیرنده",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 15,
+						CodeGuid = Guid.Parse("959b10a3-b8ed-4a9d-bdf3-17ec9b2ceb15"),
+						CodeGroupId = 4,
+						Name = "Contractor",
+						DisplayName = "سرویس دهنده",
+						IsDelete = false
+					},
 					new Code
 					{
 						CodeId = 16,
@@ -9101,6 +9108,52 @@ namespace PishePlus.Infrastructure.Persistence
 						Name = "Natural",
 						DisplayName = "حقیقی",
 						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 18,
+						CodeGuid = Guid.NewGuid(),
+						CodeGroupId = 7,
+						Name = "Accepted",
+						DisplayName = "تایید شده",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 19,
+						CodeGuid = Guid.NewGuid(),
+						CodeGroupId = 7,
+						Name = "WaitingForAcceptance",
+						DisplayName = "در انتظار تایید",
+						IsDelete = false
+					},
+					new Code
+					{
+						CodeId = 20,
+						CodeGuid = Guid.NewGuid(),
+						CodeGroupId = 7,
+						Name = "Canceled",
+						DisplayName = "لغو شده",
+						IsDelete = false
+					}
+				);
+
+			#endregion
+
+			#region Application
+
+			modelBuilder.Entity<PishePlus.Domain.Entities.Application>().HasData(
+					new PishePlus.Domain.Entities.Application
+					{
+						ApplicationId = 1,
+						ApplicationGuid = Guid.NewGuid(),
+						Name = "پیشیار پلاس"
+					},
+					new PishePlus.Domain.Entities.Application
+					{
+						ApplicationId = 2,
+						ApplicationGuid = Guid.NewGuid(),
+						Name = "متخصص"
 					}
 				);
 
@@ -9147,6 +9200,12 @@ namespace PishePlus.Infrastructure.Persistence
 						SmsTemplateId = 2,
 						SmsProviderSettingId = 1,
 						Name = "RegisterMessage"
+					},
+					new SmsTemplate
+					{
+						SmsTemplateId = 3,
+						SmsProviderSettingId = 1,
+						Name = "NewOrderNotification"
 					}
 				);
 
@@ -9173,15 +9232,15 @@ namespace PishePlus.Infrastructure.Persistence
 						ModifiedDate = DateTime.Now,
 						IsDelete = false
 					},
-                    new Role
-                    {
-                        RoleId = 3,
-                        RoleGuid = Guid.NewGuid(),
-                        Name = "Client",
-                        DisplayName = "سرویس گیرنده",
-                        ModifiedDate = DateTime.Now,
-                        IsDelete = false
-                    }
+					new Role
+					{
+						RoleId = 3,
+						RoleGuid = Guid.NewGuid(),
+						Name = "Client",
+						DisplayName = "سرویس گیرنده",
+						ModifiedDate = DateTime.Now,
+						IsDelete = false
+					}
 				);
 
 			#endregion
@@ -9199,7 +9258,7 @@ namespace PishePlus.Infrastructure.Persistence
 						FirstName = "سید مهدی",
 						LastName = "رودکی",
 						Email = "mahdiroudaki@hotmail.com",
-						PhoneNumber = "09227204305",
+						PhoneNumber = "09126842446",
 						RegisteredDate = DateTime.Now,
 						ModifiedDate = DateTime.Now,
 						IsActive = true,
@@ -9227,13 +9286,13 @@ namespace PishePlus.Infrastructure.Persistence
 					{
 						UserId = 3,
 						UserGuid = Guid.NewGuid(),
-						RoleId = 2,
+						RoleId = 1,
 						GenderCodeId = 8,
 						ProfileDocumentId = null,
-						FirstName = "حامد",
-						LastName = "حقیقیان",
-						Email = "dead.hh98@gmail.com",
-						PhoneNumber = "09108347428",
+						FirstName = "مهدی",
+						LastName = "حکمی زاده",
+						Email = "mahdiih@ymail.com",
+						PhoneNumber = "09199390494",
 						RegisteredDate = DateTime.Now,
 						ModifiedDate = DateTime.Now,
 						IsActive = true,
@@ -9244,13 +9303,47 @@ namespace PishePlus.Infrastructure.Persistence
 					{
 						UserId = 4,
 						UserGuid = Guid.NewGuid(),
-						RoleId = 2,
+						RoleId = 1,
 						GenderCodeId = 8,
 						ProfileDocumentId = null,
 						FirstName = "محمد",
 						LastName = "میرزایی",
 						Email = "white.luciferrr@gmail.com",
 						PhoneNumber = "09147830093",
+						RegisteredDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
+						IsActive = true,
+						IsRegister = true,
+						IsDelete = false
+					},
+					new User
+					{
+						UserId = 5,
+						UserGuid = Guid.NewGuid(),
+						RoleId = 1,
+						GenderCodeId = 8,
+						ProfileDocumentId = null,
+						FirstName = "رافی",
+						LastName = "اوانسیان",
+						Email = "raffi.hovanes@gmail.com",
+						PhoneNumber = "09125344652",
+						RegisteredDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
+						IsActive = true,
+						IsRegister = true,
+						IsDelete = false
+					},
+					new User
+					{
+						UserId = 6,
+						UserGuid = Guid.NewGuid(),
+						RoleId = 2,
+						GenderCodeId = 8,
+						ProfileDocumentId = null,
+						FirstName = "حامد",
+						LastName = "حقیقیان",
+						Email = "dead.hh98@gmail.com",
+						PhoneNumber = "09108347428",
 						RegisteredDate = DateTime.Now,
 						ModifiedDate = DateTime.Now,
 						IsActive = true,
@@ -9264,15 +9357,39 @@ namespace PishePlus.Infrastructure.Persistence
 			#region Admin
 
 			modelBuilder.Entity<Admin>().HasData(
-                new Admin
-                {
-                    AdminId = 1,
-                    AdminGuid = Guid.NewGuid(),
-                    UserId = 1,
-                    ModifiedDate = DateTime.Now,
-                    IsDelete = false
-                }
-            );
+				new Admin
+				{
+					AdminId = 1,
+					AdminGuid = Guid.NewGuid(),
+					UserId = 1,
+					ModifiedDate = DateTime.Now,
+					IsDelete = false
+				},
+				new Admin
+				{
+					AdminId = 2,
+					AdminGuid = Guid.NewGuid(),
+					UserId = 3,
+					ModifiedDate = DateTime.Now,
+					IsDelete = false
+				},
+				new Admin
+				{
+					AdminId = 3,
+					AdminGuid = Guid.NewGuid(),
+					UserId = 4,
+					ModifiedDate = DateTime.Now,
+					IsDelete = false
+				},
+				new Admin
+				{
+					AdminId = 4,
+					AdminGuid = Guid.NewGuid(),
+					UserId = 5,
+					ModifiedDate = DateTime.Now,
+					IsDelete = false
+				}
+			);
 
 			#endregion
 
@@ -9299,26 +9416,12 @@ namespace PishePlus.Infrastructure.Persistence
 				{
 					ContractorId = 1,
 					ContractorGuid = Guid.NewGuid(),
-					UserId = 3,
+					UserId = 6,
 					BusinessTypeCodeId = 4,
 					CityId = 751,
-					Latitude = "1",
-					Longitude = "2",
+					Latitude = "111",
+					Longitude = "222",
 					Credit = 0,
-					AverageRate = null,
-					IsDelete = false,
-					ModifiedDate = DateTime.Now
-				},
-				new Contractor
-				{
-					ContractorId = 2,
-					ContractorGuid = Guid.NewGuid(),
-					UserId = 4,
-					BusinessTypeCodeId = 4,
-					CityId = 751,
-					Latitude = "1",
-					Longitude = "2",
-					Credit = 10000,
 					AverageRate = null,
 					IsDelete = false,
 					ModifiedDate = DateTime.Now
@@ -9335,131 +9438,75 @@ namespace PishePlus.Infrastructure.Persistence
 					ContractorCategoryId = 1,
 					ContractorCategoryGuid = Guid.NewGuid(),
 					ContractorId = 1,
-					CategoryId = 4
+					CategoryId = 3
 				},
 				new ContractorCategory
 				{
 					ContractorCategoryId = 2,
 					ContractorCategoryGuid = Guid.NewGuid(),
 					ContractorId = 1,
-					CategoryId = 5
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 3,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 14
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 4,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 22
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 5,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 25
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 6,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 30
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 7,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 33
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 8,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 34
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 9,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 27
-				},
-				new ContractorCategory
-				{
-					ContractorCategoryId = 10,
-					ContractorCategoryGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					CategoryId = 20
+					CategoryId = 4
 				}
 			);
 
 			#endregion
 
-			#region Order
+			//#region Order
 
-			modelBuilder.Entity<Order>().HasData(
-				new Order
-				{
-					OrderId = 1,
-					OrderGuid = Guid.NewGuid(),
-					ClientId = 1,
-					CategoryId = 14,
-					StateCodeId = 9,
-					Title = "تیتر",
-					Description = "توضیح",
-					Comment = null,
-					Rate = null,
-					Cost = null,
-					IsDelete = false,
-					ModifiedDate = DateTime.Now
-				},
-				new Order
-				{
-					OrderId = 2,
-					OrderGuid = Guid.NewGuid(),
-					ClientId = 1,
-					CategoryId = 22,
-					StateCodeId = 9,
-					Title = "مشکل",
-					Description = "کولر ماشین مشکل داره",
-					Comment = null,
-					Rate = null,
-					Cost = null,
-					IsDelete = false,
-					ModifiedDate = DateTime.Now
-				}
-			);
+			//modelBuilder.Entity<Order>().HasData(
+			//	new Order
+			//	{
+			//		OrderId = 1,
+			//		OrderGuid = Guid.NewGuid(),
+			//		ClientId = 1,
+			//		CategoryId = 14,
+			//		StateCodeId = 9,
+			//		Title = "تیتر",
+			//		Description = "توضیح",
+			//		Comment = null,
+			//		Rate = null,
+			//		Cost = null,
+			//		IsDelete = false,
+			//		ModifiedDate = DateTime.Now
+			//	},
+			//	new Order
+			//	{
+			//		OrderId = 2,
+			//		OrderGuid = Guid.NewGuid(),
+			//		ClientId = 1,
+			//		CategoryId = 22,
+			//		StateCodeId = 9,
+			//		Title = "مشکل",
+			//		Description = "کولر ماشین مشکل داره",
+			//		Comment = null,
+			//		Rate = null,
+			//		Cost = null,
+			//		IsDelete = false,
+			//		ModifiedDate = DateTime.Now
+			//	}
+			//);
 
-			#endregion
+			//#endregion
 
-			#region OrderRequest
+			//#region OrderRequest
 
-			modelBuilder.Entity<OrderRequest>().HasData(
-				new OrderRequest
-				{
-					OrderRequestId = 1,
-					OrderRequestGuid = Guid.NewGuid(),
-					ContractorId = 1,
-					OrderId = 1,
-					Message = "پیام",
-					OfferedPrice = 250000,
-					IsAllow = true,
-					IsAccept = false,
-					IsDelete = false,
-					ModifiedDate = DateTime.Now
-				}
-			);
+			//modelBuilder.Entity<OrderRequest>().HasData(
+			//	new OrderRequest
+			//	{
+			//		OrderRequestId = 1,
+			//		OrderRequestGuid = Guid.NewGuid(),
+			//		ContractorId = 1,
+			//		OrderId = 1,
+			//		Message = "پیام",
+			//		OfferedPrice = 250000,
+			//		IsAllow = true,
+			//		IsAccept = false,
+			//		IsDelete = false,
+			//		ModifiedDate = DateTime.Now
+			//	}
+			//);
 
-			#endregion
+			//#endregion
 
 			#region Category
 
@@ -9473,6 +9520,7 @@ namespace PishePlus.Infrastructure.Persistence
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
+						SecondPageCoverDocumentId = null,
 						DisplayName = "سایت اصلی",
 						Description = null,
 						Sort = 1,
@@ -9480,7 +9528,7 @@ namespace PishePlus.Infrastructure.Persistence
 						IsActive = true,
 						IsDelete = false
 					},
-                    new Category
+					new Category
 					{
 						CategoryId = 2,
 						CategoryGuid = Guid.Parse("dec37f17-0ab2-4208-8ba7-11cc1120369b"),
@@ -9489,6 +9537,7 @@ namespace PishePlus.Infrastructure.Persistence
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
+						SecondPageCoverDocumentId = null,
 						DisplayName = "وبلاگ",
 						Description = null,
 						Sort = 2,
@@ -9496,521 +9545,159 @@ namespace PishePlus.Infrastructure.Persistence
 						IsActive = true,
 						IsDelete = false
 					},
-                    new Category
-                    {
-                        CategoryId = 3,
-                        CategoryGuid = Guid.Parse("e3b1e3a1-4d79-454d-8b1f-6c9e24e290b2"),
-                        ParentCategoryId = 1,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "خانه",
-						Description = null,
-						Sort = 1,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 4,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 1,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "حمل و نقل",
-						Description = null,
-						Sort = 2,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
 					new Category
-                    {
-                        CategoryId = 5,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
+					{
+						CategoryId = 3,
+						CategoryGuid = Guid.Parse("e3b1e3a1-4d79-454d-8b1f-6c9e24e290b2"),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
+						SecondPageCoverDocumentId = null,
 						DisplayName = "تاسیسات",
 						Description = null,
 						Sort = 1,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 6,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "الکتریکی",
-						Description = null,
-						Sort = 2,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 7,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "ایمنی و امنیت",
-						Description = null,
-						Sort = 3,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 8,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "مبلمان",
-						Description = null,
-						Sort = 4,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 9,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "آلومینیوم سازی",
-						Description = null,
-						Sort = 5,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 10,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "شیشه بری و قابسازی",
-						Description = null,
-						Sort = 6,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 11,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "کابینت سازی",
-						Description = null,
-						Sort = 7,
-                        ModifiedDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
 					},
-                    new Category
-                    {
-                        CategoryId = 12,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
+					new Category
+					{
+						CategoryId = 4,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "دکوراسیون داخلی",
-						Description = null,
-						Sort = 8,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 13,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "بنایی",
-						Description = null,
-						Sort = 9,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 14,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "آهنگری",
-						Description = null,
-						Sort = 10,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 15,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "عایق کاری",
-						Description = null,
-						Sort = 11,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 16,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "عایق کاری",
-						Description = null,
-						Sort = 12,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 17,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "نرده و حفاظ استیل",
-						Description = null,
-						Sort = 13,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 18,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "تعمیرات لوازم خانگی",
-						Description = null,
-						Sort = 14,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 19,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "نجاری",
-						Description = null,
-						Sort = 15,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 20,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "آسانسور و بالابر",
-						Description = null,
-						Sort = 16,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 21,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 3,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "کار در ارتفاع",
-						Description = null,
-						Sort = 17,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 22,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 5,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "سرویس کولر آبی",
-						Description = null,
-						Sort = 1,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 23,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 5,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "نقاشی ساختمان",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "ماشین آلات صنعتی",
 						Description = null,
 						Sort = 2,
-                        ModifiedDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 24,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 8,
+					},
+					new Category
+					{
+						CategoryId = 5,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "رنگ کاری مبل",
-						Description = null,
-						Sort = 1,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 25,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 8,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "تعمیر صندلی اداری",
-						Description = null,
-						Sort = 2,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 26,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 8,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "ساخت مبلمان",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "تامین کالا",
 						Description = null,
 						Sort = 3,
-                        ModifiedDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 27,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 8,
+					},
+					new Category
+					{
+						CategoryId = 6,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "دوخت کاور مبل",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "ساخت و ساز",
 						Description = null,
 						Sort = 4,
-                        ModifiedDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 28,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 8,
+					},
+					new Category
+					{
+						CategoryId = 7,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "تعمیر مبل",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "تعمیرات",
 						Description = null,
 						Sort = 5,
-                        ModifiedDate = DateTime.Now,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 29,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 4,
+					},
+					new Category
+					{
+						CategoryId = 8,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "اتوبار",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "خدمات",
 						Description = null,
-						Sort = 1,
-                        ModifiedDate = DateTime.Now,
+						Sort = 6,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 30,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 4,
+					},
+					new Category
+					{
+						CategoryId = 9,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "اجاره خودرو",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "زیرساخت",
 						Description = null,
-						Sort = 2,
-                        ModifiedDate = DateTime.Now,
+						Sort = 7,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 31,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 4,
+					},
+					new Category
+					{
+						CategoryId = 10,
+						CategoryGuid = Guid.NewGuid(),
+						ParentCategoryId = 1,
 						CoverDocumentId = null,
 						ActiveIconDocumentId = null,
 						InactiveIconDocumentId = null,
 						QuadMenuDocumentId = null,
-						DisplayName = "سرویس و تعمیر خودرو",
+						SecondPageCoverDocumentId = null,
+						DisplayName = "حمل و نقل",
 						Description = null,
-						Sort = 3,
-                        ModifiedDate = DateTime.Now,
+						Sort = 8,
+						ModifiedDate = DateTime.Now,
 						IsActive = true,
 						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 32,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 29,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "وانت بار",
-						Description = null,
-						Sort = 1,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 33,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 29,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "باربری و اتوبار",
-						Description = null,
-						Sort = 2,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    },
-                    new Category
-                    {
-                        CategoryId = 34,
-                        CategoryGuid = Guid.NewGuid(),
-                        ParentCategoryId = 29,
-						CoverDocumentId = null,
-						ActiveIconDocumentId = null,
-						InactiveIconDocumentId = null,
-						QuadMenuDocumentId = null,
-						DisplayName = "کارگر اسباب کشی",
-						Description = null,
-						Sort = 3,
-                        ModifiedDate = DateTime.Now,
-						IsActive = true,
-						IsDelete = false
-                    }
-            );
+					}
+			);
 
 			#endregion
-        }
-    }
+
+			#region Setting
+
+			modelBuilder.Entity<Setting>().HasData(
+					new Setting
+					{
+						SettingId = 1,
+						SettingGuid = Guid.NewGuid(),
+						UserInitialCredit = 10000,
+						OrderRequestPrice = 500
+					}
+			);
+
+			#endregion
+		}
+	}
 }

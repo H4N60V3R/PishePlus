@@ -33,6 +33,7 @@ namespace PishePlus.Infrastructure.Persistence
 
         public virtual DbSet<Admin> Admin { get; set; }
         public virtual DbSet<Advertisement> Advertisement { get; set; }
+        public virtual DbSet<PishePlus.Domain.Entities.Application> Application { get; set; }
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<CategoryTag> CategoryTag { get; set; }
         public virtual DbSet<ChatMessage> ChatMessage { get; set; }

@@ -8,6 +8,7 @@ namespace PishePlus.Domain.Entities
         public Document()
         {
             Advertisement = new HashSet<Advertisement>();
+            Application = new HashSet<Application>();
             CategoryActiveIconDocument = new HashSet<Category>();
             CategoryCoverDocument = new HashSet<Category>();
             CategoryInactiveIconDocument = new HashSet<Category>();
@@ -29,6 +30,7 @@ namespace PishePlus.Domain.Entities
 
         public virtual Code TypeCode { get; set; }
         public virtual ICollection<Advertisement> Advertisement { get; set; }
+        public virtual ICollection<Application> Application { get; set; }
         public virtual ICollection<Category> CategoryActiveIconDocument { get; set; }
         public virtual ICollection<Category> CategoryCoverDocument { get; set; }
         public virtual ICollection<Category> CategoryInactiveIconDocument { get; set; }
