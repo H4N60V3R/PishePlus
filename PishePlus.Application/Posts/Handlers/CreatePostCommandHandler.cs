@@ -28,7 +28,7 @@ namespace PishePlus.Application.Posts.Handlers
                 Description = request.Description,
                 IsShow = request.IsShow,
                 IsSuggested = request.IsSuggested,
-                IsInSlider = request.IsInSlider
+                //IsInSlider = request.IsInSlider
             };
 
             _context.Post.Add(entity);

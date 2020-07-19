@@ -10,6 +10,7 @@ namespace PishePlus.Domain.Entities
         public int ContractorId { get; set; }
         public int TitleCodeId { get; set; }
         public int DocumentId { get; set; }
+        public string Description { get; set; }
         public bool IsAccept { get; set; }
         public bool IsDelete { get; set; }
         public DateTime ModifiedDate { get; set; }

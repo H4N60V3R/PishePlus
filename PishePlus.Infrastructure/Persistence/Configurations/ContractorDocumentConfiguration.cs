@@ -20,6 +20,8 @@ namespace PishePlus.Infrastructure.Persistence.Configurations
 
             entity.Property(e => e.ContractorId).HasColumnName("ContractorID");
 
+            entity.Property(e => e.Description).IsRequired();
+
             entity.Property(e => e.DocumentId).HasColumnName("DocumentID");
 
             entity.Property(e => e.IsAccept).HasDefaultValueSql("((0))");
